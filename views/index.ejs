@@ -1,2 +1,22 @@
-<%- include("./partials/header") %>
-<%- include("./partials/footer") %>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dev Skills</title>
+</head>
+<body>
+    <h1>Dev Skills</h1>
+    
+    <ul>
+        <% for (const skill of devSkills) { %>
+            <li>
+                <strong><%= skill.name %></strong>: <%= skill.description %>
+            </li>
+        <% } %>
+    </ul>
+    
+    <a href="/add-skill">Add Skill</a>
+
+    <%- include("./partials/header") %>
+    <%- include("./partials/footer") %>
+</body>
+</html>
